@@ -35,7 +35,7 @@ app.get("/health", (req, res) => {
 
 // ---------- 3. Ruta de negocio de ejemplo ----------
 app.get("/", (req, res) => {
-  res.json({ message: `Hola desde ${config.appName}`, version: config.commit });
+  res.json({ message: `Hola desde ${config.appName} - versión 2`, version: config.commit });
 });
 
 // ---------- 4. Arranque y apagado limpio ----------
