@@ -20,7 +20,7 @@ const startedAt = Date.now();
 let shuttingDown = false;
 
 // ---------- 2. Health check (liveness): rápido, sin dependencias ----------
-app.get("/healthz", (req, res) => {
+app.get("/health", (req, res) => {
   if (shuttingDown) {
     return res.status(503).json({ status: "shutting_down" });
   }
